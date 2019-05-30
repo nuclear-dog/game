@@ -80,7 +80,7 @@ def search(request):
 
         hit_list.append(hit_dict)
 
-    return render(request, "qiaoyiqiao.html", {"page": page,
+    return render(request, "result.html", {"page": page,
                                            "all_hits": hit_list,
                                            "key_words": key_words,
                                            "total_nums": total_nums,

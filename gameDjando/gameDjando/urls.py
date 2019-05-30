@@ -20,7 +20,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('search/', views.search),
+    path(r'^search/$', views.search, name="search"),
     path('index/', views.index),
-    path('suggest/', views.getSuggest),
+    path(r'^suggest/$', views.getSuggest, name="suggest"),
 ]
