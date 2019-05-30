@@ -22,11 +22,11 @@ def search(request):
     # redis_cli.zincrby("search_keywords_set", key_words)
 
     # topn_search = " " #redis_cli.zrevrangebyscore("search_keywords_set", "+inf", "-inf", start=0, num=5)
-    page = 1  # request.GET.get("p", "1")
-    # try:
-    #     page = int(page)
-    # except:
-    #     page = 1
+    page = request.GET.get("p", "1")
+    try:
+        page = int(page)
+    except:
+        page = 1
 
     jobbole_count = 1000  # redis_cli.get("jobbole_count")
     start_time = datetime.now()
